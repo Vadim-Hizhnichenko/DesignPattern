@@ -1,2 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+
+using Singleton;
+
+var db = SingletonDatabase.Instance;
+
+// works just fine while you're working with a real database.
+var city = "Tokyo";
+Console.WriteLine($"{city} has population {db.GetPopulation(city)}");
